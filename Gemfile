@@ -27,7 +27,9 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 # Gem for translation
 gem 'rails-i18n'
+# Use for debugging.
 gem 'pry'
+# Use for Code Quality Check.
 gem 'rubocop-rails', require: false
 
 # Use ActiveStorage variant
@@ -42,6 +44,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
   gem 'dotenv-rails'
@@ -59,7 +63,10 @@ end
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
+  gem 'database_cleaner-active_record'
+  gem 'shoulda-matchers'
   gem 'selenium-webdriver'
+  gem 'simplecov'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
 end
@@ -68,6 +75,5 @@ end
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
-gem 'dotenv-rails', groups: %i[development test]
 gem 'jquery-rails', '~> 4.1', '>= 4.1.1'
 gem 'mail_form'

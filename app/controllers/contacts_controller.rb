@@ -7,9 +7,9 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(contact_params)
+    @contact.save
     respond_to do |format|
       if @contact
-        ContactUsMailer.welcome_email(@contact).deliver_now!
         @contact = Contact.new
         format.html { render 'contact' }
         format.js { flash.now[:success] = @message = "Thank you for your message. I'll get back to you soon!" }
