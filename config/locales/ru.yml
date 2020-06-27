@@ -1,0 +1,23 @@
+ru:
+  send_msg_title: "Отправьте нам сообщение"
+  tell_us_placeholder: "Скажи нам свое имя"
+  email_text: "Введите адрес электронной почты"
+  phone_text: "Введите номер телефона"
+  message_text: "Сообщение"
+  address_text: "Адрес"
+  address: "Мада Центр 8 этаж, 379 Хадсон Стрит, Нью-Йорк, Нью-Йорк 10018 НАС"
+  lets_talk: "Давайте поговорим"
+  support: "Общая поддержка"
+  contact: "контакт@пример,ком"
+  helpers:
+    placeholder:
+      contact:
+        first_name: "Имя"
+        last_name: "Фамилия"
+        email: "Например. пример@Эл.адреском"
+        phone_no: "Например. +1 800 000000"
+        message: "Напишите нам сообщение"
+    submit:
+      contact:
+        create: "послать Сообщение"  
+

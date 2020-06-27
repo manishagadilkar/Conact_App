@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ContactApp</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <%= link_to 'English', root_path(locale: :en), :class=> "nav-link"%>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Русский', root_path(locale: :ru), :class => "nav-link"%>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div id="flash-message" role="alert">
+    <%= render 'flash' %>
+  </div>
+  <%= yield %>
+  <script type="text/javascript">
+    setTimeout(function() {
+    $('#flash-message').fadeOut('fast');
+}, 20000);
+  </script>>
+</body>
+</html>
+
